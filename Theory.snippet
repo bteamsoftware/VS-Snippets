@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>xUnit Theory</Title>
+            <Author>Jon Krupa</Author>
+            <Description>Adds an xUnit Theory test method</Description>
+            <Shortcut>theory</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the xUnit test method</ToolTip>
+                    <Default>TestMethod</Default>
+                </Literal>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>The data type of the method parameter</ToolTip>
+                    <Default>string</Default>
+                </Literal>
+                <Literal>
+                    <ID>identifier</ID>
+                    <ToolTip>The name of the parameter</ToolTip>
+                    <Default>value</Default>
+                </Literal>
+                <Literal>
+                    <ID>value1</ID>
+                    <ToolTip>The first value for inline data</ToolTip>
+                    <Default>"value1"</Default>
+                </Literal>
+                <Literal>
+                    <ID>value2</ID>
+                    <ToolTip>The second value for inline data</ToolTip>
+                    <Default>"value2"</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[[Theory]
+                [InlineData($value1$)]
+                [InlineData($value2$)]
+                public void $name$($type$ $identifier$)
+                {
+                    // Arrange
+
+                    // Act
+
+                    // Assert
+                    $end$
+                }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
